@@ -1,0 +1,25 @@
+var quiz = [10, 20, 15, 7, 19, 20];
+let totalScore = 0
+
+const totalNumber = quiz.length;
+var passedQuizzes = quiz.filter(function(score) {
+  return score >=10;
+})
+var failedQuizzes = quiz.filter(function(score) {
+  return score >=10;
+})
+for(var i = 0; i < quiz.length; i++) {
+  totalScore += quiz[i];
+}
+let average = Math.round(totalScore / quiz.length);
+
+/// to get the average, i have to add them all up the divide them by their total number
+
+document.write("Quizzes " + quiz + "<hr />");
+document.write("The passing score is 10" + "<br />");
+document.write("Total number of quizzes " + totalNumber + "<br />");
+document.write("These are the scores that passed in quiz: " + passedQuizzes + "<br />");
+document.write("The total of passed scores are " + passedQuizzes.length + "<br />");
+document.write("These are the scores that failed in quiz: " + failedQuizzes + "<br />");
+document.write("The total failed scores are " + failedQuizzes.length + "<br />");
+document.write("The average score is " + average + "<br />");
